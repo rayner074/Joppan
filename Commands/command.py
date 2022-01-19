@@ -15,10 +15,7 @@ async def start(bot, message):
            ],[
            InlineKeyboardButton("close", callback_data="close")
            ]]
-         await message.reply_photo(
-    photo=random.choice(PICS),
-    caption=START_TEXT,
-    reply_markup=InlineKeyboardMarkup(button)
+        await message.reply_photo(photo=random.choice(PICS),caption=START_TEXT,reply_markup=InlineKeyboardMarkup(button)
     
         )
 
