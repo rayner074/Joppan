@@ -10,7 +10,7 @@ JanGo = Client("JanGo Bot")
 @JanGo.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, message):
         button = [[
-           InlineKeyboardButton("help", callback_data="help")
+           InlineKeyboardButton("help", callback_data="help"),
            InlineKeyboardButton("about", callback_data="about")
            ],[
            InlineKeyboardButton("close", callback_data="close")"
