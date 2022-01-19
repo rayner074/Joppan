@@ -22,7 +22,7 @@ button = [
 
 
 @JanGo.on_message(filters.command(["start"]) & filters.private, group=1)
-async def start(bot, message):
+    def start(bot, message):
        text = START_TEXT
        reply_markup = InlineKeyboardMarkup(button)
        message.replay(
