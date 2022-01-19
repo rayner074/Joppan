@@ -1,5 +1,5 @@
-#python 3.7.1
 
+from info import API_ID, API_HASH, BOT_TOKEN
 import pyrogram
 from pyrogram import Client
 
