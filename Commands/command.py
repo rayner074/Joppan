@@ -14,7 +14,7 @@ async def start(bot, message):
            InlineKeyboardButton("about", callback_data="about")
            ],[
            InlineKeyboardButton("close", callback_data="close")
-           ]
+           ]]
            await bot.send_photo(
             chat_id=message.chat.id,
             photo=random.choice(PICS),
