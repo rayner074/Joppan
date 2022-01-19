@@ -11,6 +11,6 @@ bot = Client (
   
   )
   
-  Print("alive")
+Print("alive")
 
 bot.run()
