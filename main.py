@@ -1,7 +1,7 @@
 
 import random
 import pyrogram 
-from pyrogram import Client as JanGo, filters
+from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -29,7 +29,7 @@ button = [
       
 
 
-@JanGo.on_message(filters.command(["start"]) & filters.private)
+@bot.on_message(filters.command(["start"]) & filters.private)
 def start(bot, message):
        text="START_TEXT"
        reply_markup=InlineKeyboardMarkup(button)
