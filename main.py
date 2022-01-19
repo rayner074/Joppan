@@ -1,4 +1,4 @@
-import commands
+import Commands
 import pyrogram
 from pyrogram import Client, filters
 
