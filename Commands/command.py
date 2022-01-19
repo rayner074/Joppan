@@ -13,7 +13,7 @@ async def start(bot, message):
            InlineKeyboardButton("help", callback_data="help"),
            InlineKeyboardButton("about", callback_data="about")
            ],[
-           InlineKeyboardButton("close", callback_data="close")"
+           InlineKeyboardButton("close", callback_data="close")
            ]
            await bot.send_photo(
             chat_id=message.chat.id,
