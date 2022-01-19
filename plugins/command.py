@@ -16,7 +16,7 @@ async def start(bot, message):
            ],[
            InlineKeyboardButton("close", callback_data="close")
            ]]
-       reply_markup = InlineKeyboardMarkup(buttons)
+       reply_markup = InlineKeyboardMarkup(button)
 
 
 
