@@ -15,13 +15,11 @@ async def start(bot, message):
            ],[
            InlineKeyboardButton("close", callback_data="close")
            ]]
-          await bot.send_photo(
-            chat_id=message.chat.id,
-            photo=random.choice(PICS),
-            caption=START_TEXT,
-            reply_markup = InlineKeyboardMarkup(button),
-            parse_mode="html", 
-            reply_to_message_id=message.message_id
+          await message.reply_photo(
+    photo=random.choice(PICS),
+    caption=START_TEXT,
+    reply_markup=InlineKeyboardMarkup(button)
+    )
         )
 
 
