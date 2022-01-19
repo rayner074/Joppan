@@ -1,16 +1,14 @@
 
-from info import API_ID, API_HASH, BOT_TOKEN
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer 
+import pyrogram
+from pyrogram import Client, filters
 
 bot = Client (
   "JanGo Bot",
-  api_id = API_ID,
-  api_hash = API_HASH,
-  bot_token = BOT_TOKEN
-  
+  api_id = 11980417,
+  api_hash = "0c04d148edcc0fb5ee0ef2254f7c1bc6",
+  bot_token = "5040881620:AAF8bvIFscFDf2Dro9CHI78-U6T4S20ieQI"
   )
   
-Print("alive")
-
+print("alive")
+  
 bot.run()
