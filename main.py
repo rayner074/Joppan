@@ -1,7 +1,7 @@
 
 import pyrogram
 from pyrogram import Client, filters
-from plugins import database
+from plugins import commands
 
 bot = Client(
   "JanGo Bot",
