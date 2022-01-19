@@ -21,7 +21,7 @@ async def start(bot, message):
 
 
 
-  START_TEXT = """
+START_TEXT = """
 welcome brother
  """       
-  PICS = "https://telegra.ph/file/6b6fe92e0a33b30e45303.jpg"
+PICS = "https://telegra.ph/file/6b6fe92e0a33b30e45303.jpg"
