@@ -10,5 +10,5 @@ JanGo = Client (
   bot_token = BOT_TOKEN
   )
   
-  app = JanGo,
+  app = JanGo()
   app.run()
