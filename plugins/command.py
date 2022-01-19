@@ -7,18 +7,24 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 JanGo = Client("JanGo Bot")
 
-button = [[
-           InlineKeyboardButton("help", callback_data="help"),
+button = [
+         [ InlineKeyboardButton("help", callback_data="help"),
            InlineKeyboardButton("about", callback_data="about")
            ],[
-           InlineKeyboardButton("close", callback_data="close")
-           ]]
-      reply_markup = InlineKeyboardMarkup(button)
+           InlineKeyboardButton("close", callback_data="close")]
+           ]
+      
 
 
 @JanGo.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, message):
-       bot.send_photo("me", "https://telegra.ph/file/6b6fe92e0a33b30e45303.jpg", caption="Holidays!")  
+       text = START_TEXT
+       reply_markup = InlineKeyboardMarkup(button)
+       message.replay(
+       text=text,
+       reply_markup = reply_markup,
+       disable_web_page_preview = True
+
 
 
 START_TEXT = """
