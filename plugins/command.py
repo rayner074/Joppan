@@ -9,15 +9,14 @@ JanGo = Client("JanGo Bot")
 
 @JanGo.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, message):
+     bot.send_message(message.chat_id, "START_TEXT")
         button = [[
            InlineKeyboardButton("help", callback_data="help"),
            InlineKeyboardButton("about", callback_data="about")
            ],[
            InlineKeyboardButton("close", callback_data="close")
            ]]
-        await message.reply_photo(photo=random.choice(PICS),caption=START_TEXT,reply_markup=InlineKeyboardMarkup(button)
-    
-        )
+       reply_markup = InlineKeyboardMarkup(buttons)
 
 
 
