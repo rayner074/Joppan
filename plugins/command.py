@@ -7,6 +7,11 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 JanGo = Client("JanGo Bot")
 
+START_TEXT = "welcome brother"    
+   
+PICS = "https://telegra.ph/file/6b6fe92e0a33b30e45303.jpg"
+
+
 button = [
          [ InlineKeyboardButton("help", callback_data="help"),
            InlineKeyboardButton("about", callback_data="about")
@@ -27,7 +32,3 @@ async def start(bot, message):
 
 
 
-START_TEXT = """
-welcome brother
- """       
-PICS = "https://telegra.ph/file/6b6fe92e0a33b30e45303.jpg"
