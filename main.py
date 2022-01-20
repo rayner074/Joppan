@@ -25,7 +25,7 @@ def start(bot, message):
     bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
     caption=text,
     reply_markup=reply_markup,
-    disable_web_page_preview=True
+    
     )
         
     
@@ -76,7 +76,7 @@ async def callback_data(bot, query):
           ]]
         await query.message.edit_text(
               START_TXT, reply_markup=InlineKeyboardButton(button1),
-              parse_mode="html", disable_web_page_preview=True)
+              parse_mode="html")
 
 
     elif query.data == "help":
