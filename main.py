@@ -6,7 +6,7 @@ bot = Client(
     "my first projrct",
     api_id=502966,
     api_hash="ba91c94ee88658b8702befa528544df3",
-    bot_token="5065608218:AAFPSnj4CpXpqVe1kMKPtCpziCbtyB7FQZ8"
+    bot_token="55065608218:AAGqoRYcy6wZfczCvYiXtIZUCNt4MLzIXyI"
 )
 
 START_TXT = "hey bro welcome"
@@ -79,7 +79,7 @@ async def cb_handler(bot, query):
           InlineKeyboardButton("🧳about", callback_data="about")],[
           InlineKeyboardButton("🎓home", callback_data="home")
           ]]
-       await query.message.edit_text(HELP_TXT,reply_markup=InlineKeyboardButton(button))
+       await query.message.edit_text(HELP_TXT,reply_markup=InlineKeyboardMarkup(button))
 
 
     elif query.data == "about":
@@ -88,7 +88,7 @@ async def cb_handler(bot, query):
           ],[
           InlineKeyboardButton("🎓home", callback_data="home")
           ]]
-        await query.message.edit_text(ABOUT_TXT,reply_markup=InlineKeyboardButton(button))
+        await query.message.edit_text(ABOUT_TXT,reply_markup=InlineKeyboardMarkup(button))
 
 
 bot.run()
