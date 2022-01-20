@@ -1,6 +1,6 @@
 #python 3.7.1
 
-Class Jk (object):
+class Jk (object):
   
       ABOUT_TEXT = """
 <b>🖍️ 𝑁𝑎𝑚𝑒</b> : <code> JANGO𝑡 🎀</code>   
