@@ -84,7 +84,7 @@ async def cb_handler(bot, query):
 
     elif query.data == "help":
        button = [[
-          InlineKeyboardButton("🧳about", callback_data="about")
+          InlineKeyboardButton("🧳about", callback_data="about"),
           InlineKeyboardButton("🎓home", callback_data="home")
           ],[   
           InlineKeyboardButton("🚮 Close", callback_data="close")
