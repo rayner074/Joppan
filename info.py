@@ -2,7 +2,7 @@
 
 class Jk (object):
   
-      ABOUT_TEXT = """
+    ABOUT_TEXT = """
 <b>🖍️ 𝑁𝑎𝑚𝑒</b> : <code> JANGO𝑡 🎀</code>   
 <b>👾 𝐶𝑟𝑒𝑎𝑡𝑜𝑟</b> : <b><i><a href="https://github.com/Thorappan">𝑇ℎ𝑜𝑟𝑎𝑝𝑝𝑎𝑛🔖</a></i></b>
 <b>⌨️ 𝐿𝑎𝑛𝑔𝑢𝑎𝑔𝑒</b> : <code>𝑃𝑦𝑡ℎ𝑜𝑛3📇</code>
