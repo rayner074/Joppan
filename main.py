@@ -1,6 +1,7 @@
 from pyrogram import Client,filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 import asyncio
+from info import Jk
 
 bot = Client(
     "my first projrct",
@@ -9,9 +10,6 @@ bot = Client(
     bot_token="5065608218:AAGqoRYcy6wZfczCvYiXtIZUCNt4MLzIXyI"
 )
 
-START_TXT = "hey bro welcome"
-HELP_TXT =" help section"
-ABOUT_TXT ="about section"
  
 
 @bot.on_message(filters.command("start") & filters.private)
@@ -22,7 +20,7 @@ def start(bot, message):
     ],[
     InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
-    text = START_TXT
+    text = Jk.START_TXT
     reply_markup = InlineKeyboardMarkup(button1)
     bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
     caption=text,
@@ -41,7 +39,7 @@ def help(bot, message):
           ]]
     reply_markup = InlineKeyboardMarkup(button2)
     bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
-    caption=START_TXT,
+    caption=Jk.START_TXT,
     reply_markup=reply_markup
     )
     
@@ -62,7 +60,7 @@ def alive(bot, message):
     ]]
 
     bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
-    caption=START_TXT,
+    caption=Jk.START_TXT,
     reply_markup=InlineKeyboardMarkup(buttonw)
     )
 @bot.on_callback_query()
@@ -79,7 +77,7 @@ async def cb_handler(bot, query):
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
-        await query.message.edit_text(START_TEXT, reply_markup=InlineKeyboardMarkup(button))
+        await query.message.edit_text(Jk.START_TEXT, reply_markup=InlineKeyboardMarkup(button))
 
 
     elif query.data == "help":
@@ -89,7 +87,7 @@ async def cb_handler(bot, query):
           ],[   
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
-       await query.message.edit_text(HELP_TXT,reply_markup=InlineKeyboardMarkup(button))
+       await query.message.edit_text(Jk.HELP_TXT,reply_markup=InlineKeyboardMarkup(button))
 
 
     elif query.data == "about":
@@ -100,7 +98,7 @@ async def cb_handler(bot, query):
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
-        await query.message.edit_text(ABOUT_TXT,reply_markup=InlineKeyboardMarkup(button))
+        await query.message.edit_text(Jk.ABOUT_TXT,reply_markup=InlineKeyboardMarkup(button))
 
     elif query.data == "home":
         button = [[
@@ -110,7 +108,7 @@ async def cb_handler(bot, query):
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
-        await query.message.edit_text(START_TXT,reply_markup=InlineKeyboardMarkup(button))
+        await query.message.edit_text(Jk.START_TXT,reply_markup=InlineKeyboardMarkup(button))
         
         
         
