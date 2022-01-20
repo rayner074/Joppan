@@ -18,7 +18,9 @@ ABOUT_TXT ="about section"
 def start(bot, message):
     button1 = [[
     InlineKeyboardButton("⚠️help", callback_data="help"),
-    InlineKeyboardButton("🧳about", callback_data="about")
+    InlineKeyboardButton("🧳about", callback_data="about"),
+    ],[
+    InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
     text = START_TXT
     reply_markup = InlineKeyboardMarkup(button1)
@@ -34,6 +36,8 @@ def help(bot, message):
     button2 = [[
           InlineKeyboardButton("🧳about", callback_data="about")],[
           InlineKeyboardButton("🎓home", callback_data="home")
+          ],[
+          InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
     reply_markup = InlineKeyboardMarkup(button2)
     bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
@@ -53,6 +57,8 @@ def alive(bot, message):
     InlineKeyboardButton("🧳about", callback_data="about")
     ],[
     InlineKeyboardButton("🎓home", callback_data="home")
+    ],[
+    InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
 
     bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
@@ -70,14 +76,18 @@ async def cb_handler(bot, query):
           
           InlineKeyboardButton("⚠️ 𝖧𝖾𝗅𝗉", callback_data="help"),
           InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
+          ],[
+          InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
         await query.message.edit_text(START_TEXT, reply_markup=InlineKeyboardMarkup(button))
 
 
     elif query.data == "help":
        button = [[
-          InlineKeyboardButton("🧳about", callback_data="about")],[
+          InlineKeyboardButton("🧳about", callback_data="about")
           InlineKeyboardButton("🎓home", callback_data="home")
+          ],[   
+          InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
        await query.message.edit_text(HELP_TXT,reply_markup=InlineKeyboardMarkup(button))
 
@@ -87,8 +97,21 @@ async def cb_handler(bot, query):
           InlineKeyboardButton("⚠️help", callback_data="help"),
           ],[
           InlineKeyboardButton("🎓home", callback_data="home")
+          ],[
+          InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
         await query.message.edit_text(ABOUT_TXT,reply_markup=InlineKeyboardMarkup(button))
 
-
+    elif query.data == "home":
+        button = [[
+          InlineKeyboardButton("⚠️help", callback_data="help"),
+          ],[
+          InlineKeyboardButton("About", callback_data="about")
+          ],[
+          InlineKeyboardButton("🚮 Close", callback_data="close")
+          ]]
+        await query.message.edit_text(START_TXT,reply_markup=InlineKeyboardMarkup(button))
+        
+        
+        
 bot.run()
