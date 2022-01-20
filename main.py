@@ -59,24 +59,19 @@ def alive(bot, message):
     caption=START_TXT,
     reply_markup=InlineKeyboardMarkup(buttonw)
     )
-@bot.on_callback_query(filters.regex(r"^(start|help|about)$"))
-async def callback_data(bot, query):
+@bot.on_callback_query()
+async def cb_handler(bot, query):
+
     if query.data == "close":
         await query.message.delete()
 
-    elif query.data == "home":
-        button1 = [[
-          InlineKeyboardButton("⚠️help", callback_data="help"),
-          InlineKeyboardButton("🧳about", callback_data="about")
-          ],[
-          InlineKeyboardButton("🎓home", callback_data="home")
-          ],[
-          InlineKeyboardButton("🎓close", callback_data="close")
+    elif query.data == "start":
+        button = [[  
           
+          InlineKeyboardButton("⚠️ 𝖧𝖾𝗅𝗉", callback_data="help"),
+          InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
           ]]
-        await query.message.edit_text(
-              START_TXT, reply_markup=InlineKeyboardButton(button1),
-              parse_mode="html")
+        await query.message.edit_text(START_TEXT, reply_markup=InlineKeyboardMarkup(button))
 
 
     elif query.data == "help":
