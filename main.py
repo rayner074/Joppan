@@ -7,7 +7,8 @@ bot = Client(
     "my first projrct",
     api_id=502966,
     api_hash="ba91c94ee88658b8702befa528544df3",
-    bot_token="5065608218:AAGqoRYcy6wZfczCvYiXtIZUCNt4MLzIXyI"
+    bot_token="5065608218:AAGqoRYcy6wZfczCvYiXtIZUCNt4MLzIXyI",
+    plugins = { root : bot }
 )
 
  
