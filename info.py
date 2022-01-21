@@ -19,7 +19,8 @@ anyway welcome To PoojA 🧘 Bot </i>"""
     
     """
     PICS = "https://telegra.ph/file/65ba65b8eab1064c901cc.jpg"
-    KICK_TXT = """<b> This command can use in groups
+    KICK_TXT = """<b>🔖 KICK NOTE 🔖</b>
+<b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
 <code>/kick <\code> Use this command to kick a user from the Group"""
