@@ -144,7 +144,7 @@ async def cb_handler(bot, query):
        button = [[
           InlineKeyboardButton("⬅️Back", callback_data="help")
           ]] 
-       await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
+       await query.message.edit_text(Jk.UNMUTE_TXT,reply_markup=InlineKeyboardMarkup(button))
 
 
 bot.run()
