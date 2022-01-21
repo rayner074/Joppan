@@ -85,7 +85,7 @@ async def cb_handler(bot, query):
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
-        await query.message.edit_text(Jk.START_TEXT, reply_markup=InlineKeyboardMarkup(button))
+        await query.message.edit_text(Jk.START_TXT, reply_markup=InlineKeyboardMarkup(button))
 
 
     elif query.data == "help":
