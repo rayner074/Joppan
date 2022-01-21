@@ -34,8 +34,14 @@ def start(bot, message):
 @bot.on_message(filters.command("help"))
 def help(bot, message):
     button2 = [[
-          InlineKeyboardButton("🧳about", callback_data="about")],[
-          InlineKeyboardButton("🎓home", callback_data="home")
+          InlineKeyboardButton("🦵Kick", callback_data="kick"),
+          InlineKeyboardButton("👋Ban", callback_data="ban")
+          ],[
+          InlineKeyboardButton("🤫Mute", callback_data="mute"),
+          InlineKeyboardButton("😌Unmute", callback_data="unmute")
+          ],[
+          InlineKeyboardButton("🤹about", callback_data="about"),
+          InlineKeyboardButton("🗼home", callback_data="home")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
@@ -111,7 +117,27 @@ async def cb_handler(bot, query):
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
         await query.message.edit_text(Jk.START_TXT,reply_markup=InlineKeyboardMarkup(button))
-        
-        
-        
+     elif query.data == "kick":
+        button = [[
+          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          ]] 
+        await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
+     
+     elif query.data == "ban":
+        button = [[
+          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          ]] 
+        await query.message.edit_text(Jk.BAN_TXT,reply_markup=InlineKeyboardMarkup(button)) 
+     elif query.data == "mute":
+        button = [[
+          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          ]] 
+        await query.message.edit_text(Jk.MUTE_TXT,reply_markup=InlineKeyboardMarkup(button))
+     elif query.data == "unmute":
+        button = [[
+          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          ]] 
+        await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
+
+
 bot.run()
