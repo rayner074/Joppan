@@ -40,7 +40,7 @@ def help(bot, message):
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
     reply_markup = InlineKeyboardMarkup(button2)
-    bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
+    bot.send_photo(message.chat.id, "https://telegra.ph/file/1fb1142f24762ea800557.jpg",
     caption=Jk.START_TXT,
     reply_markup=reply_markup
     )
@@ -48,7 +48,7 @@ def help(bot, message):
 
 @bot.on_message(filters.command("photo"))
 def photo(bot, message):
-    bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg")
+    bot.send_photo(message.chat.id, "https://telegra.ph/file/1fb1142f24762ea800557.jpg")
 
 @bot.on_message(filters.command("alive"))
 def alive(bot, message):
@@ -61,7 +61,7 @@ def alive(bot, message):
     InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
 
-    bot.send_photo(message.chat.id, "https://telegra.ph/file/67fee801475d5bd21549a.jpg",
+    bot.send_photo(message.chat.id, "https://telegra.ph/file/1fb1142f24762ea800557.jpg",
     caption=Jk.START_TXT,
     reply_markup=InlineKeyboardMarkup(buttonw)
     )
