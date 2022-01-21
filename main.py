@@ -126,23 +126,23 @@ async def cb_handler(bot, query):
         await query.message.edit_text(Jk.START_TXT,reply_markup=InlineKeyboardMarkup(button))
      elif query.data == "kick":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="help"),
+          InlineKeyboardButton("⬅️Back", callback_data="help")
           ]] 
         await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
      
      elif query.data == "ban":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="help"),
+          InlineKeyboardButton("⬅️Back", callback_data="help")
           ]] 
         await query.message.edit_text(Jk.BAN_TXT,reply_markup=InlineKeyboardMarkup(button)) 
      elif query.data == "mute":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="help"),
+          InlineKeyboardButton("⬅️Back", callback_data="help")
           ]] 
         await query.message.edit_text(Jk.MUTE_TXT,reply_markup=InlineKeyboardMarkup(button))
      elif query.data == "unmute":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="help"),
+          InlineKeyboardButton("⬅️Back", callback_data="help")
           ]] 
         await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
 
