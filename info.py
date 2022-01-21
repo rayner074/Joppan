@@ -19,6 +19,7 @@ anyway welcome To PoojA 🧘 Bot </i>"""
     
     """
     PICS = "https://telegra.ph/file/65ba65b8eab1064c901cc.jpg"
+
     KICK_TXT = """<b>🔖 KICK NOTE 🔖</b>
 <b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
@@ -29,14 +30,14 @@ And only 👩‍🔧admin can use this feature</b>
 <b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/ban  Use this command to ban a user from the Group
-<code>/unban  Use this command to unban a user from the Group"""
+/ban  Use this command to ban a user from the Group
+/unban  Use this command to unban a user from the Group"""
 
     MUTE_TXT = """<b>🔖 MUTE NOTE 🔖</b>
 <b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/mute  Use this command to mute a user in the Group"""
+/mute  Use this command to mute a user in the Group"""
 
     UNMUTE_TXT = """<b>🔖 UNMUTE NOTE 🔖</b>
 <b> This command can use in groups
