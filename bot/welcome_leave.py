@@ -1,4 +1,4 @@
-from pyrogram import Client, filters, emoji
+from pyrogram import Client as bot, filters, emoji
 
 
 MENTION = "[{}](tg://user?id={})"
