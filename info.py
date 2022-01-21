@@ -24,7 +24,7 @@ anyway welcome To PoojA 🧘 Bot </i>"""
 <b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/kick <\code> Use this command to kick a user from the Group"""
+/kick Use this command to kick a user from the Group"""
 
     BAN_TXT = """ <b>🔖 BAN NOTE 🔖</b>
 <b> This command can use in groups
@@ -43,4 +43,4 @@ And only 👩‍🔧admin can use this feature</b>
 <b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/unmute  Use this command to unmute a user from the Group"""
+/unmute  Use this command to unmute a user from the Group"""
