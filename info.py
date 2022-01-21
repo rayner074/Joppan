@@ -18,3 +18,4 @@ anyway welcome To JAnGo Bot </i>"""
  I hope you guys enjoy ..🥰
     
     """
+    PICS = "https://telegra.ph/file/65ba65b8eab1064c901cc.jpg"
