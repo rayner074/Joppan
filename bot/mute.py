@@ -1,4 +1,4 @@
-from pyrogram.types import ChatPermission
+from pyrogram.types import ChatPermissions
 from pyrogram import Client as bot , filters
 
 @bot.on_message(filters.command("ban")&filters.group)
