@@ -17,8 +17,8 @@ bot = Client(
 @bot.on_message(filters.command("start") & filters.private)
 def start(bot, message):
     button1 = [[
-    InlineKeyboardButton("⚠️help", callback_data="help"),
-    InlineKeyboardButton("🧳about", callback_data="about"),
+    InlineKeyboardButton("⚠️ Help", callback_data="help"),
+    InlineKeyboardButton("🎀 About", callback_data="about"),
     ],[
     InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
@@ -43,7 +43,8 @@ def help(bot, message):
           InlineKeyboardButton("🤹about", callback_data="about"),
           InlineKeyboardButton("🗼home", callback_data="home")
           ],[
-          InlineKeyboardButton("🚮 Close", callback_data="close")
+          InlineKeyboardButton("🚮 Close", callback_data="close"),
+          InlineKeyboardButton("⬅️Back", callback_data="start")
           ]]
     reply_markup = InlineKeyboardMarkup(button2)
     bot.send_photo(message.chat.id, Jk.PICS,
@@ -59,10 +60,10 @@ def photo(bot, message):
 @bot.on_message(filters.command("alive"))
 def alive(bot, message):
     buttonw = [[
-    InlineKeyboardButton("⚠️help", callback_data="help"),
-    InlineKeyboardButton("🧳about", callback_data="about")
+    InlineKeyboardButton("⚠️ Help", callback_data="help"),
+    InlineKeyboardButton("🎀 About", callback_data="about")
     ],[
-    InlineKeyboardButton("🎓home", callback_data="home")
+    InlineKeyboardButton("🗼Home", callback_data="home")
     ],[
     InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
@@ -78,10 +79,9 @@ async def cb_handler(bot, query):
         await query.message.delete()
 
     elif query.data == "start":
-        button = [[  
-          
+        button = [[     
           InlineKeyboardButton("⚠️ 𝖧𝖾𝗅𝗉", callback_data="help"),
-          InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 🤠", callback_data="about")
+          InlineKeyboardButton("🎀 𝖠𝖻𝗈𝗎𝗍", callback_data="about")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
@@ -96,10 +96,11 @@ async def cb_handler(bot, query):
           InlineKeyboardButton("🤫Mute", callback_data="mute"),
           InlineKeyboardButton("😌Unmute", callback_data="unmute")
           ],[
-          InlineKeyboardButton("🤹about", callback_data="about"),
-          InlineKeyboardButton("🗼home", callback_data="home")
+          InlineKeyboardButton("🤹 About", callback_data="about"),
+          InlineKeyboardButton("🗼 Home", callback_data="home")
           ],[
-          InlineKeyboardButton("🚮 Close", callback_data="close")
+          InlineKeyboardButton("🚮 Close", callback_data="close"),
+          InlineKeyboardButton("⬅️ Back", callback_data="start")
           ]]
    
        await query.message.edit_text(Jk.HELP_TXT,reply_markup=InlineKeyboardMarkup(button))
@@ -108,18 +109,17 @@ async def cb_handler(bot, query):
     elif query.data == "about":
        button = [[
           InlineKeyboardButton("⚠️help", callback_data="help"),
+          InlineKeyboardButton("🗼 Home", callback_data="home")
           ],[
-          InlineKeyboardButton("🎓home", callback_data="home")
-          ],[
-          InlineKeyboardButton("🚮 Close", callback_data="close")
+          InlineKeyboardButton("🚮 Close", callback_data="close"),
+          InlineKeyboardButton("⬅️Back", callback_data="help")
           ]]
        await query.message.edit_text(Jk.ABOUT_TXT,reply_markup=InlineKeyboardMarkup(button))
 
     elif query.data == "home":
        button = [[
-          InlineKeyboardButton("⚠️help", callback_data="help"),
-          ],[
-          InlineKeyboardButton("About", callback_data="about")
+          InlineKeyboardButton("⚠️ Help", callback_data="help"),
+          InlineKeyboardButton("🎀 About", callback_data="about")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
