@@ -1,3 +1,6 @@
+from pyrogram.types import ChatPermission
+from pyrogram import Client as bot , filters
+
 @bot.on_message(filters.command("ban")&filters.group)
 def ban(bot, message):
     bot.kick_chat_member(message.chat.id, message.reply_to_message.from_user.id, ChatPermissions())
