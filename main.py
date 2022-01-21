@@ -89,7 +89,7 @@ async def cb_handler(bot, query):
 
 
     elif query.data == "help":
-       button2 = [[
+       button = [[
           InlineKeyboardButton("🦵Kick", callback_data="kick"),
           InlineKeyboardButton("👋Ban", callback_data="ban")
           ],[
