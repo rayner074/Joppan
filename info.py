@@ -24,18 +24,21 @@ And only 👩‍🔧admin can use this feature</b>
 
 <code>/kick <\code> Use this command to kick a user from the Group"""
 
-    BAN_TXT = """<b> This command can use in groups
+    BAN_TXT = """ <b>🔖 BAN NOTE 🔖</b>
+<b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/ban <\code> Use this command to ban a user from the Group
-<code>/unban <\code> Use this command to unban a user from the Group"""
+<code>/ban  Use this command to ban a user from the Group
+<code>/unban  Use this command to unban a user from the Group"""
 
-    MUTE_TXT = """<b> This command can use in groups
+    MUTE_TXT = """<b>🔖 MUTE NOTE 🔖</b>
+<b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/mute <\code> Use this command to mute a user in the Group"""
+<code>/mute  Use this command to mute a user in the Group"""
 
-    UNMUTE_TXT = """<b> This command can use in groups
+    UNMUTE_TXT = """<b>🔖 UNMUTE NOTE 🔖</b>
+<b> This command can use in groups
 And only 👩‍🔧admin can use this feature</b>
 
-<code>/unmute <\code> Use this command to unmute a user from the Group"""
+<code>/unmute  Use this command to unmute a user from the Group"""
