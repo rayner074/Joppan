@@ -89,12 +89,19 @@ async def cb_handler(bot, query):
 
 
     elif query.data == "help":
-       button = [[
-          InlineKeyboardButton("🧳about", callback_data="about"),
-          InlineKeyboardButton("🎓home", callback_data="home")
-          ],[   
+       button2 = [[
+          InlineKeyboardButton("🦵Kick", callback_data="kick"),
+          InlineKeyboardButton("👋Ban", callback_data="ban")
+          ],[
+          InlineKeyboardButton("🤫Mute", callback_data="mute"),
+          InlineKeyboardButton("😌Unmute", callback_data="unmute")
+          ],[
+          InlineKeyboardButton("🤹about", callback_data="about"),
+          InlineKeyboardButton("🗼home", callback_data="home")
+          ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
+   
        await query.message.edit_text(Jk.HELP_TXT,reply_markup=InlineKeyboardMarkup(button))
 
 
@@ -119,23 +126,23 @@ async def cb_handler(bot, query):
         await query.message.edit_text(Jk.START_TXT,reply_markup=InlineKeyboardMarkup(button))
      elif query.data == "kick":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          InlineKeyboardButton("⬅️Back", callback_data="help"),
           ]] 
         await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
      
      elif query.data == "ban":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          InlineKeyboardButton("⬅️Back", callback_data="help"),
           ]] 
         await query.message.edit_text(Jk.BAN_TXT,reply_markup=InlineKeyboardMarkup(button)) 
      elif query.data == "mute":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          InlineKeyboardButton("⬅️Back", callback_data="help"),
           ]] 
         await query.message.edit_text(Jk.MUTE_TXT,reply_markup=InlineKeyboardMarkup(button))
      elif query.data == "unmute":
         button = [[
-          InlineKeyboardButton("⬅️Back", callback_data="back"),
+          InlineKeyboardButton("⬅️Back", callback_data="help"),
           ]] 
         await query.message.edit_text(Jk.KICK_TXT,reply_markup=InlineKeyboardMarkup(button))
 
