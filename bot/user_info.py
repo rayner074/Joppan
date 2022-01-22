@@ -11,9 +11,16 @@ async def showid(client, message):
         first = message.from_user.first_name 
         last = message.from_user.last_name or "" 
         username = message.from_user.username 
+        
+        buttons = [[
+            InlineKeyboardButton('🔐 Close', callback_data='close')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        text= (f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> {username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n",quote=True)
         await message.reply_text(
-            f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> {username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n",
-            quote=True )
+        text=text, 
+        reply_markup=reply_markup,
+        parse_mode="html")
 
 
 @bot.on_message(filters.command('info'))
