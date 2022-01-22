@@ -51,9 +51,9 @@ def photo(bot, message):
 def alive(bot, message):
     buttonw = [[
     InlineKeyboardButton("⚠️ Help", callback_data="help"),
-    InlineKeyboardButton("🎀 About", callback_data="about")
+    InlineKeyboardButton("🛡️ About", callback_data="about")
     ],[
-    InlineKeyboardButton("🗼Home", callback_data="home")
+    InlineKeyboardButton("🗼 Home", callback_data="home")
     ],[
     InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
