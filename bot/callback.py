@@ -25,7 +25,8 @@ async def cb_handler(bot, query):
           InlineKeyboardButton("👋 Ban", callback_data="ban")
           ],[
           InlineKeyboardButton("🤫 Mute", callback_data="mute"),
-          InlineKeyboardButton("😌 Unmute", callback_data="unmute")
+          InlineKeyboardButton("😌 Unmute", callback_data="unmute"),
+          InlineKeyboardButton("🎗️ User Info", callback_data="usrinfo")
           ],[
           InlineKeyboardButton("🛡️ About", callback_data="about"),
           InlineKeyboardButton("🗼 Home", callback_data="home")
