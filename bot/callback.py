@@ -12,7 +12,7 @@ async def cb_handler(bot, query):
     elif query.data == "start":
         button = [[     
           InlineKeyboardButton("⚠️ 𝖧𝖾𝗅𝗉", callback_data="help"),
-          InlineKeyboardButton("🎀 𝖠𝖻𝗈𝗎𝗍", callback_data="about")
+          InlineKeyboardButton("🛡️ 𝖠𝖻𝗈𝗎𝗍", callback_data="about")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
@@ -21,13 +21,13 @@ async def cb_handler(bot, query):
 
     elif query.data == "help":
        button = [[
-          InlineKeyboardButton("🦵Kick", callback_data="kick"),
-          InlineKeyboardButton("👋Ban", callback_data="ban")
+          InlineKeyboardButton("🦵 Kick", callback_data="kick"),
+          InlineKeyboardButton("👋 Ban", callback_data="ban")
           ],[
-          InlineKeyboardButton("🤫Mute", callback_data="mute"),
-          InlineKeyboardButton("😌Unmute", callback_data="unmute")
+          InlineKeyboardButton("🤫 Mute", callback_data="mute"),
+          InlineKeyboardButton("😌 Unmute", callback_data="unmute")
           ],[
-          InlineKeyboardButton("🤹 About", callback_data="about"),
+          InlineKeyboardButton("🛡️ About", callback_data="about"),
           InlineKeyboardButton("🗼 Home", callback_data="home")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close"),
@@ -39,7 +39,7 @@ async def cb_handler(bot, query):
 
     elif query.data == "about":
        button = [[
-          InlineKeyboardButton("⚠️help", callback_data="help"),
+          InlineKeyboardButton("⚠️ help", callback_data="help"),
           InlineKeyboardButton("🗼 Home", callback_data="home")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close"),
@@ -50,7 +50,7 @@ async def cb_handler(bot, query):
     elif query.data == "home":
        button = [[
           InlineKeyboardButton("⚠️ Help", callback_data="help"),
-          InlineKeyboardButton("🎀 About", callback_data="about")
+          InlineKeyboardButton("🛡️ About", callback_data="about")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close")
           ]]
@@ -76,4 +76,10 @@ async def cb_handler(bot, query):
           InlineKeyboardButton("⬅️Back", callback_data="help")
           ]] 
        await query.message.edit_text(Jk.UNMUTE_TXT,reply_markup=InlineKeyboardMarkup(button))
+
+    elif query.data == "usrinfo":
+       button = [[
+          InlineKeyboardButton("⬅️Back", callback_data="help")
+          ]] 
+       await query.message.edit_text(Jk.USERINFO_TXT,reply_markup=InlineKeyboardMarkup(button))
 
