@@ -1,5 +1,6 @@
 from pyrogram import Client as bot, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, callbackquery
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+import asyncio
 from info import Jk
 
 @bot.on_message(filters.command("start") & filters.private)
