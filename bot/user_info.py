@@ -13,7 +13,7 @@ async def showid(client, message):
         username = message.from_user.username 
         
         buttons = [[
-            InlineKeyboardButton('🔐 Close', callback_data='close')
+            InlineKeyboardButton('🚮 Close', callback_data='close')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         text=f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> {username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n"
@@ -31,6 +31,12 @@ async def showinfo(client, message):
         first = message.from_user.first_name 
         last = message.from_user.last_name or "None" 
         username = message.from_user.username 
+        buttons = [[
+            InlineKeyboardButton('🚮 Close', callback_data='close')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)  
+        text1=f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> @{username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n <b>➲User Link:</b> <a href='tg://user?id={user_id}'><b>Click Here</b></a>\n" 
         await message.reply_text(
-            f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> @{username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n <b>➲User Link:</b> <a href='tg://user?id={user_id}'><b>Click Here</b></a>\n",
-            quote=True )
+        text=text, 
+        reply_markup=reply_markup
+        )
