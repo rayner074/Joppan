@@ -1,4 +1,4 @@
-from pyrogram import Client,filters
+from pyrogram import Client as bot, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 import asyncio
 from info import Jk
