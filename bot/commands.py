@@ -7,7 +7,7 @@ from info import Jk
 def start(bot, message):
     button1 = [[
     InlineKeyboardButton("⚠️ Help", callback_data="help"),
-    InlineKeyboardButton("🎀 About", callback_data="about"),
+    InlineKeyboardButton("🛡️ About", callback_data="about"),
     ],[
     InlineKeyboardButton("🚮 Close", callback_data="close")
     ]]
@@ -23,15 +23,15 @@ def start(bot, message):
 @bot.on_message(filters.command("help"))
 def help(bot, message):
     button2 = [[
-          InlineKeyboardButton("🦵Kick", callback_data="kick"),
-          InlineKeyboardButton("👋Ban", callback_data="ban")
+          InlineKeyboardButton("🦵 Kick", callback_data="kick"),
+          InlineKeyboardButton("👋 Ban", callback_data="ban")
           ],[
-          InlineKeyboardButton("🤫Mute", callback_data="mute"),
-          InlineKeyboardButton("😌Unmute", callback_data="unmute"),
-          InlineKeyboardButton("🎗️User Info", callback_data="usrinfo")
+          InlineKeyboardButton("🤫 Mute", callback_data="mute"),
+          InlineKeyboardButton("😌 Unmute", callback_data="unmute"),
+          InlineKeyboardButton("🎗️ User Info", callback_data="usrinfo")
           ],[
-          InlineKeyboardButton("🤹about", callback_data="about"),
-          InlineKeyboardButton("🗼home", callback_data="home")
+          InlineKeyboardButton("🛡️ about", callback_data="about"),
+          InlineKeyboardButton("🗼 home", callback_data="home")
           ],[
           InlineKeyboardButton("🚮 Close", callback_data="close"),
           InlineKeyboardButton("⬅️Back", callback_data="start")
