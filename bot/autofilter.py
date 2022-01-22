@@ -345,11 +345,7 @@ async def auto_filter (bot, update):
 async def cb_handler(bot, query:CallbackQuery, group=1):
     
      
-    if query.data == "close":
-        await query.message.delete()
-
-
-    elif "btn" in query.data :
+    if "btn" in query.data :
         query.data = query.data.split("|") 
 
         index_val = query.data[0]
