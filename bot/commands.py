@@ -27,7 +27,8 @@ def help(bot, message):
           InlineKeyboardButton("👋Ban", callback_data="ban")
           ],[
           InlineKeyboardButton("🤫Mute", callback_data="mute"),
-          InlineKeyboardButton("😌Unmute", callback_data="unmute")
+          InlineKeyboardButton("😌Unmute", callback_data="unmute"),
+          InlineKeyboardButton("🎗️User Info", callback_data="usrinfo")
           ],[
           InlineKeyboardButton("🤹about", callback_data="about"),
           InlineKeyboardButton("🗼home", callback_data="home")
