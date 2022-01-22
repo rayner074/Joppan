@@ -16,11 +16,11 @@ async def showid(client, message):
             InlineKeyboardButton('🔐 Close', callback_data='close')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        text= (f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> {username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n",quote=True)
+        text=f"<b>➲ First Name:</b> {first}\n<b>➲ Last Name:</b> {last}\n<b>➲ Username:</b> {username}\n<b>➲ Telegram ID:</b> <code>{user_id}</code>\n"
         await message.reply_text(
         text=text, 
-        reply_markup=reply_markup,
-        parse_mode="html")
+        reply_markup=reply_markup
+        )
 
 
 @bot.on_message(filters.command('info'))
