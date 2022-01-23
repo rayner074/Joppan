@@ -26,12 +26,12 @@ async def showid(client, message):
         user_id = message.from_user.id
         chat_id = message.chat.id
         if message.reply_to_message:
-            reply_id = f"<b>🎯 Replied User ID:</b> `{message.reply_to_message.from_user.id}`"
+            reply_id = f"🎯 Replied User ID: `{message.reply_to_message.from_user.id}`"
         else:
             reply_id = ""
             
         await message.reply_text(
-            f"<b>📌 Your ID:</b> `{user_id}`\n<b>🎗️ Group ID:</b> `{chat_id}`\n{reply_id}",
+            f"📌 Your ID: `{user_id}`\n🎗️ Group ID: `{chat_id}`\n{reply_id}",
             parse_mode="md",
             quote=True
         )          
