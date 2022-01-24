@@ -6,10 +6,6 @@ import pyrogram
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
 
 from database.filters_mdb import(
    add_filter,
@@ -26,7 +22,7 @@ from plugins.helpers import parser,split_quotes
 
 
 
-@Client.on_message(filters.command(Config.ADD_FILTER_CMD))
+@Client.on_message(filters.command("addfilter))
 async def addfilter(client, message):
       
     userid = message.from_user.id
@@ -278,7 +274,7 @@ async def deletefilter(client, message):
     await delete_filter(message, query, grp_id)
         
 
-@Client.on_message(filters.command(Config.DELETE_ALL_CMD))
+@Client.on_message(filters.command("delfilter"))
 async def delallconfirm(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
@@ -360,14 +356,5 @@ async def give_filter(client,message):
                     pass
                 break 
                 
-    if Config.SAVE_USER == "yes":
-        try:
-            await add_user(
-                str(message.from_user.id),
-                str(message.from_user.username),
-                str(message.from_user.first_name + " " + (message.from_user.last_name or "")),
-                str(message.from_user.dc_id)
-            )
-        except:
-            pass
+   
       
