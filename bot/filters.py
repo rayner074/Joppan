@@ -15,8 +15,8 @@ from .database.filters_mdb import(
    count_filters
 )
 
-from database.connections_mdb import active_connection
-from database.users_mdb import add_user, all_users
+from .database.connections_mdb import active_connection
+from .database.users_mdb import add_user, all_users
 
 from .helpers import parser,split_quotes
 
