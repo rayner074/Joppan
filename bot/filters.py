@@ -229,7 +229,7 @@ async def get_all(client, message):
         parse_mode="md"
     )
         
-@Client.on_message(filters.command(Config.DELETE_FILTER_CMD))
+@Client.on_message(filters.command("delfilter"))
 async def deletefilter(client, message):
     userid = message.from_user.id
     chat_type = message.chat.type
@@ -301,7 +301,7 @@ async def delallconfirm(client, message):
         return
 
     st = await client.get_chat_member(grp_id, userid)
-    if (st.status == "creator") or (str(userid) in Config.AUTH_USERS):
+    if (st.status == "creator"):
         await message.reply_text(
             f"This will delete all filters from '{title}'.\nDo you want to continue??",
             reply_markup=InlineKeyboardMarkup([
