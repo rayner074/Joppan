@@ -1,4 +1,4 @@
 pyrogram
-Tgcrypto
-motor
-Pymongo
+TgCrypto
+umongo
+dnspython
