@@ -3,6 +3,15 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 import asyncio
 from info import Jk
 
+from database.connections_mdb import(
+    all_connections,
+    active_connection,
+    if_active,
+    delete_connection,
+    make_active,
+    make_inactive
+)
+
 @bot.on_callback_query()
 async def cb_handler(bot, query):
 
