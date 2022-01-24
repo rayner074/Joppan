@@ -22,7 +22,7 @@ from .helpers import parser,split_quotes
 
 
 
-@Client.on_message(filters.command("addfilter))
+@Client.on_message(filters.command("addfilter"))
 async def addfilter(client, message):
       
     userid = message.from_user.id
