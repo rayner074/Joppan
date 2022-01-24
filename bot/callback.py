@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
 import asyncio
 from info import Jk
 
-from database.connections_mdb import(
+from .database.connections_mdb import(
     all_connections,
     active_connection,
     if_active,
